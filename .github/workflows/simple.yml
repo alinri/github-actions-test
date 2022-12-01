@@ -13,3 +13,8 @@ jobs:
         run: |
           node -v
           python -V
+  run_another_shell_command:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: curl google.com
+        run: curl https://google.com
