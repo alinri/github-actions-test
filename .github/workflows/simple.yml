@@ -18,3 +18,5 @@ jobs:
     steps:
       - name: curl google.com
         run: curl https://google.com
+      - name: python version
+        run: python -V
