@@ -20,3 +20,8 @@ jobs:
         run: curl https://google.com
       - name: python version
         run: python -V
+      - name: python Commands
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
