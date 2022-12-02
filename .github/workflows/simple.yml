@@ -4,6 +4,14 @@ on:
   - push
 
 jobs:
+  run-on-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
@@ -25,11 +33,3 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-on-windows:
-    runs-on: windows-latest
-    steps:
-      - name: Directory Powershell
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
-        shell: bash
