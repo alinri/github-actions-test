@@ -14,6 +14,7 @@ jobs:
         shell: bash
   run-shell-command:
     runs-on: ubuntu-latest
+    needs: ["run-on-windows"]
     steps:
       - name: echo a string
         run: echo "Hello World"
@@ -23,6 +24,7 @@ jobs:
           python -V
   run_another_shell_command:
     runs-on: ubuntu-22.04
+    needs: ["run-on-windows"]
     steps:
       - name: curl google.com
         run: curl https://google.com
